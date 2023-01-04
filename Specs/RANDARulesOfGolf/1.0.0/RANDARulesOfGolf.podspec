@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
 	cs.dependency            'KalturaPlayerSDKStreamamg/Core'
 	cs.dependency            'Firebase/AnalyticsWithoutAdIdSupport'
 	cs.dependency            'FirebaseMessaging'
+	cs.dependency            'FirebaseCore'
         cs.vendored_frameworks   = 'RANDARulesOfGolf.xcframework'
         cs.preserve_paths        = ['RANDARulesOfGolf.xcframework']
     end
