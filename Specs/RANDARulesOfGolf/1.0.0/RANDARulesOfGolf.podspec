@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     s.homepage              = 'https://www.randa.org/rules/rules-of-golf-home'
     s.license               = { :type => 'Copyright', :file => 'LICENSE' }
     s.author                = { 'The R&A' => 'rules@randa.org' }
-    s.source                = { :http => 'https://s3.eu-west-2.amazonaws.com/randa.rog.sdk.ios/1.0.0/RANDARulesOfGolf.xcframework.zip' 
+    s.source                = { :http => 'https://s3.eu-west-2.amazonaws.com/randa.rog.sdk.ios/#{s.version}/RANDARulesOfGolf.xcframework.zip' 
 }
     s.platform              = :ios
     s.swift_version         = '5'
