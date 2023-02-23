@@ -25,7 +25,7 @@ Add the following to your `Podfile`:
 pod 'RANDARulesOfGolf'
 ```
 
-Add the following post install script, or else the framework won't build. More info [here](https://github.com/CocoaPods/CocoaPods/issues/9232).
+Add the following post install script, or else the framework won't build. More info [here](https://github.com/CocoaPods/CocoaPods/issues/9232) and [here](https://github.com/CocoaPods/CocoaPods/issues/8891).
 
 ```
 post_install do | installer |
