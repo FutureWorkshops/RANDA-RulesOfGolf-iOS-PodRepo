@@ -96,10 +96,27 @@ Objective-C:
 [ROGSDK setLanguageWithLanguage:AppLanguageFrench];
 ```
 
+## Showing the Rules of Golf Tab Bar (including Browser, Search & Learn tabs)
 
-## Showing the Rules of Golf Browser Screen
+<img src="https://user-images.githubusercontent.com/1300916/220942812-124ca0cc-b21b-4cf9-b62e-779ca2a99230.PNG" alt="screenshot" width="200"/>
 
-<img src="https://user-images.githubusercontent.com/1862078/175298430-227933b5-85e0-4fd9-9fea-f0eb0da8c5b2.png" alt="screenshot" width="200"/>
+Swift:
+
+```
+let rogTabBarController = ROGTabBarController()
+self.present(rogTabBarController, animated: true)
+```
+
+Objective-C:
+```
+ROGTabBarController *rogTabBarController = [[ROGTabBarController alloc] init];
+[self presentViewController:rogTabBarController animated:YES completion:nil];
+```
+
+
+## Showing just the Rules of Golf Browser Screen
+
+<img src="https://user-images.githubusercontent.com/1300916/220943083-339a337a-edf9-4fae-8ddb-8d9dad031922.PNG" alt="screenshot" width="200"/>
 
 Swift:
 
@@ -114,9 +131,9 @@ ROGBrowserNavigationController *rogBrowserNavigationController = [[ROGBrowserNav
 [self presentViewController:rogBrowserNavigationController animated:YES completion:nil];
 ```
 
-## Showing the Rules of Golf Search Screen
+## Showing just the Rules of Golf Search Screen
 
-<img src="https://user-images.githubusercontent.com/1862078/214604192-9b6187c1-0e84-40ce-accc-b8a8b006df2f.png" alt="screenshot" width="200"/>
+<img src="https://user-images.githubusercontent.com/1300916/220943189-03d32a77-c115-4507-8883-d32b5a213b9b.PNG" alt="screenshot" width="200"/>
 
 Swift:
 
@@ -131,9 +148,9 @@ ROGSearchNavigationController *searchNavigationController = [[ROGSearchNavigatio
 [self presentViewController: searchNavigationController animated:YES completion:nil];
 ```
 
-## Showing the Rules of Golf Learn Screen
+## Showing just the Rules of Golf Learn Screen
 
-<img src="https://user-images.githubusercontent.com/1862078/214604084-11122236-3ccb-4beb-b566-75b894f143b4.png" alt="screenshot" width="200"/>
+<img src="https://user-images.githubusercontent.com/1300916/220943329-128b8b8d-b65d-49e6-8b8b-12ae55f9e967.PNG" alt="screenshot" width="200"/>
 
 Swift:
 
