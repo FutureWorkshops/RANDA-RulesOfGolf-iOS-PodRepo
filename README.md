@@ -70,13 +70,11 @@ This license file `randa-rog.license` needs to be added to the main bundle of yo
 Add the following at the top your view controller.
 
 Swift:
-
 ```
 import RANDARulesOfGolf
 ```
 
 Objective-C:
-
 ```
 #import “RANDARulesOfGolf/RANDARulesOfGolf.h”
 ```
@@ -96,12 +94,11 @@ Objective-C:
 [ROGSDK setLanguageWithLanguage:AppLanguageFrench];
 ```
 
-## Showing the Rules of Golf Tab Bar (including Browser, Search & Learn tabs)
+## Showing the Rules of Golf Tab Bar (including Browse, Search & Learn tabs)
 
 <img src="https://user-images.githubusercontent.com/1300916/220942812-124ca0cc-b21b-4cf9-b62e-779ca2a99230.PNG" alt="screenshot" width="200"/>
 
 Swift:
-
 ```
 let rogTabBarController = ROGTabBarController()
 self.present(rogTabBarController, animated: true)
@@ -113,13 +110,25 @@ ROGTabBarController *rogTabBarController = [[ROGTabBarController alloc] init];
 [self presentViewController:rogTabBarController animated:YES completion:nil];
 ```
 
+### Or if you want to change the tab order (or show fewer tabs):
+
+Swift:
+```
+let rogTabBarController = ROGTabBarController(tabs: [.learn, .browse, .search])
+self.present(rogTabBarController, animated: true)
+```
+
+Objective-C:
+```
+ROGTabBarController *rogTabBarController = [[ROGTabBarController alloc] initWithTabIdentifiers:@[ROGSDKTabIdentifiers.learn, ROGSDKTabIdentifiers.browse, ROGSDKTabIdentifiers.search]];
+[self presentViewController:rogTabBarController animated:YES completion:nil];
+```
 
 ## Showing just the Rules of Golf Browser Screen
 
 <img src="https://user-images.githubusercontent.com/1300916/220943083-339a337a-edf9-4fae-8ddb-8d9dad031922.PNG" alt="screenshot" width="200"/>
 
 Swift:
-
 ```
 let rogBrowserNavigationController = ROGBrowserNavigationController()  
 self.present(rogBrowserNavigationController, animated: true)
@@ -136,7 +145,6 @@ ROGBrowserNavigationController *rogBrowserNavigationController = [[ROGBrowserNav
 <img src="https://user-images.githubusercontent.com/1300916/220943189-03d32a77-c115-4507-8883-d32b5a213b9b.PNG" alt="screenshot" width="200"/>
 
 Swift:
-
 ```
 let searchNavigationController = ROGSearchNavigationController()  
 self.present(searchNavigationController, animated: true)
@@ -153,7 +161,6 @@ ROGSearchNavigationController *searchNavigationController = [[ROGSearchNavigatio
 <img src="https://user-images.githubusercontent.com/1300916/220943329-128b8b8d-b65d-49e6-8b8b-12ae55f9e967.PNG" alt="screenshot" width="200"/>
 
 Swift:
-
 ```
 let learnNavigationController = ROGLearnNavigationController()  
 self.present(learnNavigationController, animated: true)
@@ -165,6 +172,3 @@ ROGLearnNavigationController * learnNavigationController = [[ROGLearnNavigationC
 [self presentViewController: learnNavigationController animated:YES completion:nil];
 
 ```
-
-
-
