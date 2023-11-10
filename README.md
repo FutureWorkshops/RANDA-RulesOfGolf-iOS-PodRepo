@@ -197,3 +197,13 @@ rogTabBarController.modalPresentationStyle = UIModalPresentationFullScreen;
 UIViewController *rootViewController = [[[[UIApplication sharedApplication] windows] firstObject] rootViewController];
 [rootViewController presentViewController:rogTabBarController animated:YES completion:nil];
 ```
+
+## Note about analytics logging within the SDK
+
+The SDK collects the following anonymous events and sends them to The R&A Firebase Analytics account:
+
+- New device: Sent the first time the SDK is shown for the current app installation.
+- Session began: Sent when a new session begins.
+- Session ended: Sent when a session is considered to have ended (sent just before the next session begins, as this is the only opportunity we have to determine the session end condition of 30 minutes of inactivity).
+
+You may wish to update the privacy declarations on your store listings to reflect this.
